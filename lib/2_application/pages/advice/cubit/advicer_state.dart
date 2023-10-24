@@ -1,27 +1,27 @@
-part of 'advicer_bloc.dart';
+part of 'advicer_cubit.dart';
 
-sealed class AdvicerState extends Equatable {
-  const AdvicerState();
+sealed class AdvicerCubitState extends Equatable {
+  const AdvicerCubitState();
 
   @override
   List<Object> get props => [];
 }
 
-final class AdvicerInitial extends AdvicerState {
+final class AdvicerInitial extends AdvicerCubitState {
   const AdvicerInitial();
 
   @override
   String toString() => 'AdvicerInitial()';
 }
 
-final class AdvicerStateLoading extends AdvicerState {
+final class AdvicerStateLoading extends AdvicerCubitState {
   const AdvicerStateLoading();
 
   @override
   String toString() => 'AdvicerStateLoading()';
 }
 
-final class AdvicerStateLoaded extends AdvicerState {
+final class AdvicerStateLoaded extends AdvicerCubitState {
   final String advice;
 
   const AdvicerStateLoaded({
@@ -35,7 +35,7 @@ final class AdvicerStateLoaded extends AdvicerState {
   String toString() => 'AdvicerStateLoaded(advice: $advice)';
 }
 
-final class AdvicerStateError extends AdvicerState {
+final class AdvicerStateError extends AdvicerCubitState {
   final String message;
 
   const AdvicerStateError({

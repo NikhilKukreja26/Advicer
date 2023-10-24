@@ -7,4 +7,6 @@ sealed class AdvicerEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class AdviceRequestedEvent extends AdvicerEvent {}
+class AdviceRequestedEvent extends AdvicerEvent {
+  const AdviceRequestedEvent();
+}
