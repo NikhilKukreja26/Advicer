@@ -12,9 +12,8 @@ const serverFailureMessage = 'Oops, API Error. please try again!';
 const cacheFailureMessage = 'Oops, cache failed. Please try again!';
 
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
-  AdvicerBloc() : super(const AdvicerInitial()) {
-    final AdviceUsecase adviceUsecase = AdviceUsecase();
-
+  final AdviceUsecase adviceUsecase;
+  AdvicerBloc({required this.adviceUsecase}) : super(const AdvicerInitial()) {
     on<AdviceRequestedEvent>((event, emit) async {
       emit(const AdvicerStateLoading());
       // executes the business logic

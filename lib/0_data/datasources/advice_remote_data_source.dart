@@ -1,15 +1,21 @@
 import 'dart:convert';
 
+import 'package:http/http.dart' as http;
+
 import 'package:adviser/0_data/exceptions/exceptions.dart';
 import 'package:adviser/0_data/models/advice_model.dart';
-import 'package:http/http.dart' as http;
 
 abstract interface class AdviceRemoteDataSource {
   Future<AdviceModel> getRandomAdviceFromApi();
 }
 
 class AdviceRemoteDataSourceImpl implements AdviceRemoteDataSource {
-  final client = http.Client();
+  final http.Client client;
+
+  const AdviceRemoteDataSourceImpl({
+    required this.client,
+  });
+
   @override
   Future<AdviceModel> getRandomAdviceFromApi() async {
     final response = await client
