@@ -10,5 +10,5 @@ class AdviceEntity extends Equatable {
   });
 
   @override
-  List<Object> get props => [advice, id];
+  List<Object?> get props => [advice, id];
 }

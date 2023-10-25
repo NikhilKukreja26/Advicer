@@ -1,6 +1,7 @@
 import 'package:adviser/1_domain/entities/advice_entity.dart';
+import 'package:equatable/equatable.dart';
 
-class AdviceModel extends AdviceEntity {
+class AdviceModel extends AdviceEntity with EquatableMixin {
   const AdviceModel({
     required super.id,
     required super.advice,
@@ -13,6 +14,6 @@ class AdviceModel extends AdviceEntity {
     );
   }
 
-  // @override
-  // List<Object> get props => [];
+  @override
+  List<Object?> get props => [];
 }
