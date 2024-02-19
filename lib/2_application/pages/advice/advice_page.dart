@@ -1,4 +1,3 @@
-import 'package:adviser/1_domain/usecases/advice_usecase.dart';
 import 'package:adviser/2_application/core/services/theme_service.dart';
 import 'package:adviser/2_application/pages/advice/bloc/advicer_bloc.dart';
 import 'package:adviser/2_application/pages/advice/widgets/advise_field.dart';

@@ -30,9 +30,9 @@ class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
 
   String _mapFailureToMessage(Failure failure) {
     switch (failure.runtimeType) {
-      case ServerFailure:
+      case const (ServerFailure):
         return serverFailureMessage;
-      case CacheFailure:
+      case const (CacheFailure):
         return cacheFailureMessage;
       default:
         return generalFailureMessage;
